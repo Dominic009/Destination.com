@@ -38,9 +38,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 50px auto;
     padding: 15px 15px;
 }
 
@@ -165,10 +163,11 @@ nav {
 /* Section 1 */
 .section-1 {
     display: flex;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     margin-top: 100px;
-    gap: 50px;
+    gap: 20px;
 }
 
 .textarea-1 {
@@ -176,6 +175,8 @@ nav {
     font-size: 16px;
     font-weight: 500;
     line-height: 25px;
+    width: 50%;
+    padding: 25px;
 }
 
 .sec-title {
@@ -195,7 +196,8 @@ nav {
 }
 
 .sec-img img {
-    scale: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 16px;
     transition: scale ease-in-out 330ms;
     cursor: pointer;
@@ -203,7 +205,7 @@ nav {
 
 .sec-img img:hover {
     box-shadow: 3px 2px 8px black;
-    scale: 94%;
+    scale: 105%;
 }
 
 
@@ -228,23 +230,26 @@ nav {
 
 .image-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .first-row {
     display: flex;
     justify-content: center;
     width: 100%;
+    gap: 18px;
 }
 
-.first-box {
-    scale: 97%;
-}
 
-.second-box {
-    scale: 97%;
+.first-box{
+    position: relative;
 }
-
-.place-name {
+.first-box img{
+    width: 100%;
+}
+.place-name01{
     position: absolute;
     top: 50%;
     left: 40%;
@@ -253,6 +258,29 @@ nav {
     font-weight: 900;
 }
 
+
+
+.second-box{
+    position: relative;
+}
+.second-box img{
+    width: 100%;
+}
+.place-name02{
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 900;
+}
+.place-name {
+    position: absolute;
+    top: 0;
+    color: rgb(213, 0, 0);
+    font-size: 25px;
+    font-weight: 900;
+}
 
 .second-row {
     display: flex;
@@ -267,7 +295,7 @@ nav {
 .place-name2 {
     position: absolute;
     top: 50%;
-    left: 38%;
+    left: 30%;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-weight: 900;
@@ -277,14 +305,15 @@ nav {
 .third-row {
     display: flex;
     justify-content: center;
+    gap: 18px;
 }
 
-.sixth-box {
-    scale: 97%;
+.sixth-box img{
+    width: 100%;
 }
 
-.seventh-box {
-    scale: 97%;
+.seventh-box img{
+    width: 100%;
 }
 
 .place-name3 {
@@ -308,6 +337,7 @@ nav {
     width: 90%;
     margin: 0 auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
 }
 
@@ -411,6 +441,8 @@ nav {
 
 .first-con {
     background-image: url(./Images/Group\ 39.png);
+    background-position: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 96%;
     display: flex;
@@ -422,7 +454,7 @@ nav {
 
 .inner-div {
     width: 50%;
-    height: 300px;
+    height: 100%;
     flex-shrink: 0;
     border-radius: 16px;
     border: 2px solid #FFF;
@@ -458,10 +490,13 @@ nav {
     font-size: 25px;
     font-weight: 800;
     margin-top: 25px;
+    width: 20%;
 }
 
 .second-con {
     background-image: url(./Images/Group\ 40.png);
+    background-position: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 96%;
     display: flex;
@@ -487,16 +522,19 @@ nav {
     border-radius: 16px;
     border: 1px solid #FF5400;
     padding: 40px;
+    width: 80%;
 }
 
 .textarea-3 span {
     color: #5A5A5D;
+    width: 100%;
 }
 
 .textarea-3 hr {
     margin-top: 18px;
     margin-bottom: 18px;
     opacity: 0.2;
+    width: 100%;
 }
 
 .textarea-3 input {
@@ -511,8 +549,35 @@ nav {
     border-radius: 8px;
     background: rgba(19, 19, 24, 0.05);
     font-size: 15px;
+    border: solid 1px;
+    width: auto;
 }
 
+.image-5{
+    width: 100%;
+    position: relative;
+}
+.image-5 img{
+    width: 100%;
+    height: 100%;
+}
+.discount{
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    right: 8px;
+    rotate: -25deg;
+    width: 180px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 15px;
+}
 
 
 /* FOOTER SECTION */
@@ -542,10 +607,6 @@ nav {
     border-bottom: solid 1px rgba(128, 128, 128, 0.229);
     padding-bottom: 120px;
 }
-/* .footer hr{
-    margin: 40px 0;
-    color: black;
-} */
 
 .footer span{
     margin-top:90px;
@@ -580,15 +641,21 @@ nav {
     /* Header section */
     nav {
         margin-top: 20px;
+        margin: auto;
+        justify-content: center;
+        width: 50%;        
     }
-
     .nav-links {
         display: none;
     }
-
+    .logo-sec{
+        scale: 70%;
+        margin-right: 250px;
+    }
     .menu-icon {
         display: block;
         font-size: 18px;
+        margin-right: 40px;
     }
 
     .banner-img img {
@@ -663,8 +730,13 @@ nav {
         margin: 20px;
     }
 
+    .textarea-1{
+        width: 90%;
+        margin: 0 auto;
+    }
     .textarea-1 ul {
         padding: 20px;
+        width: 100%;
     }
 
     .btn {
@@ -702,11 +774,11 @@ nav {
     .third-row {
         flex-direction: column;
         width: 100%;
+        margin-bottom: 45px;
     }
 
     .third-row img {
         width: 100%;
-        margin-bottom: 35px;
     }
 
 
@@ -763,14 +835,14 @@ nav {
 
     .information {
         flex-wrap: wrap;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         gap: 15px;
         font-size: 12px;
     }
 
     .inner-div {
-        padding: 12px;
+        padding: 25px;
         justify-content: center;
     }
 
@@ -813,5 +885,33 @@ nav {
     }
     .image-5 img{
         width: 100%;
+    }
+    .textarea-3{
+        width: 80%;
+        margin: auto;
+    }
+    .textarea-3 input{
+        width: 50%;
+    }
+
+
+    /* Footer section */
+    .footer{
+        margin-top: 50px;
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+    }
+    .footer p{
+        padding: 50px;
+    }
+    .footer .logo{
+        width: 90%;
+        flex-direction: column;
+        scale: 90%;
+        margin: 0 auto;
+    }
+    .social-link img{
+        width: 50%;
     }
 }
